@@ -1,0 +1,33 @@
+preferences:
+    general:
+        audioLib: PTB
+        units: deg
+
+window:
+    size: [1920, 1080]
+    pos: [0, 0]
+    color: [0, 0, 0]
+    fullscr: True
+    winType: pyglet
+    waitBlanking: True
+
+monitor:
+    name: default
+    width: 69.8  # in cm
+    distance: 210  # in cm
+    gamma: 1
+
+operating system: linux
+
+
+
+Task settings: 
+    Response interval: 0.8 # time in s you allow the participant to respond that still counts as correct response (only relevant for unambiguous stimuli)
+    Unambiguous switches: 10 # total nr of times the stimulus switches from house to face and vice versa
+    Blocks: 4 # e.g. 4 blocks would mean 2 rivalry and 2 unambiguous (alternated)
+    Stimulus duration rivalry: 10 # 120 (2mins) duration in s
+    Stimulus duration unambiguous: 5 # duration in s (there will be a random jitter added to make the stimulus non predictable!)
+    Number unambiguous trials: 10 # only for unambiguous
+    Break duration: 10 # duration in s
+    Stimulus path: './stimuli/'
+    Screenshot: True # makes a screenshot when aborting experiment
