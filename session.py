@@ -9,16 +9,16 @@
 import numpy as np
 import os
 from psychopy.visual import ImageStim
-from exptools2.core.session import Session
+from exptools2.core import PylinkEyetrackerSession
 from trial import BRTrial
 import random
 
 opj = os.path.join
 
 
-class BinocularRivalrySession(Session):
+class BinocularRivalrySession(PylinkEyetrackerSession):
 
-    def __init__(self, output_str, output_dir, settings_file, subject_ID):
+    def __init__(self, output_str, output_dir, settings_file, subject_ID, eyetracker_on=True):
         """ Initializes StroopSession object. 
       
         Parameters
@@ -33,7 +33,7 @@ class BinocularRivalrySession(Session):
         n_trials : int
             Number of trials to present (a custom parameter for this class)
         """
-        super().__init__(output_str, output_dir, settings_file)  # initialize using parent class constructor!
+        super().__init__(output_str, output_dir, settings_file, eyetracker_on)  # initialize using parent class constructor!
         self.subject_ID = subject_ID
         self.nr_unambiguous_trials = self.settings['Task settings']['Unambiguous trials']
         self.n_blocks = self.settings['Task settings']['Blocks'] #  for now this can be set in the setting file! 
@@ -123,10 +123,10 @@ class BinocularRivalrySession(Session):
     def run(self):
         print("-------------RUN SESSION---------------")
         self.display_text('Press SPACE to start experiment', keys='space')
-
+        self.calibrate_eyetracker()
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
-
+        self.start_recording_eyetracker()
         for trial in self.trial_list:
             self.current_trial = trial 
             self.current_trial_start_time = self.clock.getTime()
