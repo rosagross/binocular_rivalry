@@ -2,6 +2,7 @@ Task settings:
     Blocks: 4
     Break duration: 10
     Number unambiguous trials: 10
+    Phase duration: 10
     Response interval: 0.8
     Screenshot: true
     Stimulus duration rivalry: 10
@@ -55,12 +56,12 @@ window:
     - 0
     - 0
     - 0
-    fullscr: true
+    fullscr: false
     pos:
     - 0
     - 0
     size:
-    - 1920
-    - 1080
+    - 600
+    - 400
     waitBlanking: true
     winType: pyglet

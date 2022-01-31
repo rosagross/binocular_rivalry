@@ -1,14 +1,12 @@
 Task settings:
     Blocks: 4
-    Break duration: 10
+    Break duration: 3
     Number unambiguous trials: 10
-    Phase duration: 10
     Response interval: 0.8
     Screenshot: true
     Stimulus duration rivalry: 10
-    Stimulus duration unambiguous: 5
     Stimulus path: ./stimuli/
-    Unambiguous switches: 10
+    Unambiguous trials: 10
 eyetracker:
     address: 100.1.1.1
     dot_size: 0.1

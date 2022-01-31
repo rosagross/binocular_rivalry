@@ -9,9 +9,9 @@
 import numpy as np
 import os
 from psychopy.visual import ImageStim
-
 from exptools2.core.session import Session
 from trial import BRTrial
+import random
 
 opj = os.path.join
 
@@ -35,20 +35,18 @@ class BinocularRivalrySession(Session):
         """
         super().__init__(output_str, output_dir, settings_file)  # initialize using parent class constructor!
         self.subject_ID = subject_ID
-        self.nr_unambiguous_switches = self.settings['Task settings']['Unambiguous switches']
+        self.nr_unambiguous_trials = self.settings['Task settings']['Unambiguous trials']
         self.n_blocks = self.settings['Task settings']['Blocks'] #  for now this can be set in the setting file! 
         self.stim_duration_rivalry = self.settings['Task settings']['Stimulus duration rivalry']
-        self.stim_duration_unambiguous = self.settings['Task settings']['Stimulus duration unambiguous']
         self.path_to_stim = self.settings['Task settings']['Stimulus path']
-        
+        self.phase_duration_break = self.settings['Task settings']['Break duration']
+
         print("stuck 1")
         if self.settings['Task settings']['Screenshot']==True:
             self.screen_dir=output_dir+'/'+output_str+'_Screenshots'
             if not os.path.exists(self.screen_dir):
                 os.mkdir(self.screen_dir)
         
-        print("stuck 2")
-
         self.create_blocks()
         self.create_stimulus()
 
@@ -67,52 +65,59 @@ class BinocularRivalrySession(Session):
 
         # for every block, the trials are created beforehand
         # note that the rivalry block only has one trial, whereas the unambiguous block has several trials
-        trial_nr = 0
+        trial_nr = 1
         for block_ID in range(self.n_blocks):
-            print("current block is", block_ID)
+            print("\ncurrent block is", block_ID)
+            print("start condition", self.start_condition)
+
+            # before every block we have an interstimulus interval where only the fixation is seen
+            self.trial_list.append(BRTrial(self, 0, 'break', 'break', [self.phase_duration_break]))
 
             # equal subjects start with rivarly, unequal with unambiguous
-
-            if block_ID +self.start_condition % 2 == 0:
+            if (block_ID + self.start_condition) % 2 == 0:
                 block_type = 'rivalry'
                 trial_type = 'house_face'
+                self.trial_list.append(BRTrial(self, trial_nr, block_type, trial_type, [self.stim_duration_rivalry]))
                 print("appended trial nr", trial_nr)
-                self.trial_list.append(BRTrial(self, trial_nr, block_type, trial_type))
                 trial_nr += 1 
 
             else:
                 block_type = 'unambiguous'
-                # TODO: for the first trial in this block we need to append a break!
-                # add unambiguous trials (TODO: think about if we want to have a random\equal number of trials in every block)
-                for i in range(self.nr_unambiguous_switches):
+                
+                # create the phase duration array (every image should be displayed for a different amount of time
+                # but it should add up to the same duration for every unambiguous block)
+                phase_durations_unambiguous = self.create_duration_array()
+                print("durations unambiguous:", phase_durations_unambiguous)
+                for i, phase_duration in enumerate(phase_durations_unambiguous):
                     # determine if next trial shows house or face
                     trial_type = 'house' if trial_nr % 2 == 0 else 'face'
 
                     print("appended trial nr", trial_nr)
                     print("trial number in unabiguous:", i)
-                    self.trial_list.append(BRTrial(self, trial_nr, block_type, trial_type))
+                    print("phase duration", phase_duration)
+                    self.trial_list.append(BRTrial(self, trial_nr, block_type, trial_type, [phase_duration]))
                     trial_nr += 1 
 
 
-        # times for the physical stimulus to change
-        #switch_stimuli_times = 0
 
     def create_stimulus(self):
         """ This function creates house, face and rivalry stmiulus. """
 
         self.house_stim = ImageStim(self.win, image=self.path_to_stim+'replay_house.bmp')
         self.face_stim = ImageStim(self.win, image=self.path_to_stim+'replay_face.bmp')
-        self.rivalry_stim = ImageStim(self.win, image=self.path_to_stim+'replay_rivalry.bmp')
+        self.rivalry_stim = ImageStim(self.win, image=self.path_to_stim+'rivalry.bmp')
+        self.fixation_screen = ImageStim(self.win, image=self.path_to_stim+'fixation.bmp')
 
     def draw_stimulus(self):
         """ This function will be executed from the Trial instance, when the tiral runs. """
-        print("draw stimulus")
-        if self.current_trial == 'house_face':
+        if self.current_trial.trial_type == 'house_face':
             self.rivalry_stim.draw()
-        elif self.current_trial == 'face':
+        elif self.current_trial.trial_type == 'face':
             self.face_stim.draw()
-        elif self.current_trial == 'house':
+        elif self.current_trial.trial_type == 'house':
             self.house_stim.draw()
+        elif self.current_trial.trial_type == 'break':
+            self.fixation_screen.draw()
 
 
     def run(self):
@@ -129,6 +134,32 @@ class BinocularRivalrySession(Session):
             self.current_trial.run()
 
         self.close()
+
+    def create_duration_array(self):
+        """
+        Function that takes the duration entries from the setting file and constructs the 
+        phase duration (duration of trial and ISI) for all trials. 
+        The rivalry trial has a very long duration, whereas the 
+        """
+        total_duration = self.stim_duration_rivalry
+        nr_switches = self.nr_unambiguous_trials - 1
+
+        assert total_duration  >= nr_switches >= 1
+
+        random_splits = random.sample(range(total_duration), nr_switches)
+        random_splits.sort()
+
+        current = 0
+        total_chunks = []
+
+        for split in random_splits:
+            # calculate the difference between the current and the next
+            diff = split - current
+            current = split
+            total_chunks.append(diff)
+        diff = total_duration - current
+        total_chunks.append(diff)
+        return total_chunks
 
 
 
