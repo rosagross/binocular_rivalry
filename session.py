@@ -120,12 +120,17 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
 
     def run(self):
         print("-------------RUN SESSION---------------")
-        self.display_text('Press SPACE to start experiment', keys='space')
         
         if self.eyetracker_on:
             self.calibrate_eyetracker()
             self.start_recording_eyetracker()
             
+        # give some intructions for the participant
+        self.display_text('Please fixate the middle of the screen for the entire time\n'
+                            'of the experiment. You are going to see a house or a face on the screen.'
+                            'Please press the button when the image changes from the house to the face and vice versa.' 
+                            'Press space to continue.', keys='space')
+        self.display_text('Press SPACE to start experiment', keys='space')
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
         
