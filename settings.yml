@@ -4,10 +4,10 @@ preferences:
         units: deg
 
 window:
-    size: [600, 400]
+    size: [1920, 1080]
     pos: [0, 0]
     color: [0, 0, 0]
-    fullscr: False
+    fullscr: True
     winType: pyglet
     waitBlanking: True
 
@@ -26,5 +26,5 @@ Task settings:
     Stimulus duration rivalry: 120 # 120 (2mins) duration in s
     Break duration: 3 # duration in s
     Stimulus path: './stimuli/'
-    Screenshot: True # makes a screenshot when aborting experiment
+    Screenshot: False # makes a screenshot when aborting experiment
     Exit key: 'q'

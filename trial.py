@@ -8,7 +8,6 @@
 
 
 from psychopy import event
-from psychopy.visual import Circle
 from exptools2.core.trial import Trial
 import os
 opj = os.path.join
@@ -23,13 +22,12 @@ class BRTrial(Trial):
 
     def __init__(self, session, trial_nr, block_type, trial_type, phase_duration, *args, **kwargs):
         
-        super().__init__(session, trial_nr, phase_duration, verbose=False, *args, **kwargs)
+        super().__init__(session, trial_nr, phase_duration, parameters={'block_type': block_type, 'trial_type': trial_type}, verbose=False, *args, **kwargs)
         
         # store if it is a rivalry trial or unambiguous trial 
         self.ID = trial_nr
         self.block_type = block_type
         self.trial_type = trial_type # this can be either house_face, house or face
-        self.fixation_dot = Circle(self.session.win, radius=0.1, edges=100)
         
             
     def draw(self):
@@ -62,10 +60,13 @@ class BRTrial(Trial):
 
                 event_type = self.trial_type
 
-                idx = self.session.global_log.shape[0]
-                self.session.global_log.loc[idx, 'trial_nr'] = self.trial_nr
+                idx = self.session.global_log.shape[0]            
                 self.session.global_log.loc[idx, 'event_type'] = event_type
+                self.session.global_log.loc[idx, 'trial_nr'] = self.trial_nr
+                self.session.global_log.loc[idx, 'onset'] = t
+                self.session.global_log.loc[idx, 'phase'] = self.phase
                 self.session.global_log.loc[idx, 'response'] = key
+                self.session.global_log.loc[idx, 'nr_frames'] = 0
  
                 for param, val in self.parameters.items():
                     self.session.global_log.loc[idx, param] = val

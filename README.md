@@ -7,15 +7,20 @@ This is repository for a simple binocular rivalry experiment. It is meant to wor
 - psychopy
 - exptools
 
-
 **Execution**
 
 To execute the experiment run: python main.py sub-*xxx* ses-*x*
+
+<br>
 
 **NOTE** 
 
 - Trial counting starts with 1 
 - The break is zero
 
+<br>
 
+**TODO**
 
+- count the number of valid switch reports (for the unambiguous trials)
+- check if the timing of the stimuli works! 

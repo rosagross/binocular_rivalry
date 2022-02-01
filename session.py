@@ -142,27 +142,29 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         """
         Function that takes the duration entries from the setting file and constructs the 
         phase duration (duration of trial and ISI) for all trials. 
-        The rivalry trial has a very long duration, whereas the 
         """
         total_duration = self.stim_duration_rivalry
         nr_switches = self.nr_unambiguous_trials - 1
 
         assert total_duration  >= nr_switches >= 1
 
-        random_splits = random.sample(range(total_duration), nr_switches)
-        random_splits.sort()
+        # compute how long one trial would take in an equal split
+        equal_duration = total_duration/self.nr_unambiguous_trials
 
-        current = 0
-        total_chunks = []
-
-        for split in random_splits:
-            # calculate the difference between the current and the next
-            diff = split - current
-            current = split
-            total_chunks.append(diff)
-        diff = total_duration - current
-        total_chunks.append(diff)
-        return total_chunks
+        # draw jitters for every switch
+        stdv = 1.5
+        total_time = []
+        for i in range(nr_switches-1):
+            jitter = np.random.normal(scale=stdv)
+            trial_time = equal_duration + jitter
+            total_time.append(trial_time)
+            
+        durations_sum = np.array(total_time).sum()
+        duration_difference = total_duration - durations_sum
+        # append whats missing to the last trial
+        total_time.append(duration_difference)
+        print(len(total_time))
+        return total_time
 
 
 
