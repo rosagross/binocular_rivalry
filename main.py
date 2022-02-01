@@ -26,7 +26,7 @@ def main():
     output_str = subject + '_' + sess
     output_dir = './output_data/'+output_str+'_Logs'
     settings_file = './settings.yml'
-    eyetracker_on = True
+    eyetracker_on = False
 
     if not os.path.exists('./output_data'):
         os.mkdir('./output_data')
@@ -38,7 +38,7 @@ def main():
     # instantiate and run the session 
     experiment_session = BinocularRivalrySession(output_str, output_dir, settings_file, subject_ID, eyetracker_on)
     experiment_session.run()
-    
+
 
 if __name__ == '__main__':
     main()

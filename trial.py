@@ -33,7 +33,7 @@ class BRTrial(Trial):
         
             
     def draw(self):
-        ''' This tells what the happens in the trial, and this is defined in the session itself. '''
+        ''' This tells what happens in the trial, and this is defined in the session itself. '''
         self.session.draw_stimulus()
 
 
@@ -41,9 +41,10 @@ class BRTrial(Trial):
         """ Logs responses/triggers """
         events = event.getKeys(timeStamped=self.session.clock)
         if events:
-            if 'q' in [ev[0] for ev in events]:  # specific key in settings?
+            if self.session.exit_key in [ev[0] for ev in events]: 
                 print("End experiment!")
-                if self.session.settings['PRF stimulus settings']['Screenshot']==True:
+                if self.session.settings['Task settings']['Screenshot']==True:
+                    print('\nSCREENSHOT\n')
                     self.session.win.saveMovieFrames(opj(self.session.screen_dir, self.session.output_str+'_Screenshot.png'))
                 self.session.close()
                 self.session.quit()
@@ -58,6 +59,18 @@ class BRTrial(Trial):
                 if self.block_type == 'rivalry':
                     self.session.rivalry_responses =+ 1
                     self.session.total_responses += 1
+
+                event_type = self.trial_type
+
+                idx = self.session.global_log.shape[0]
+                self.session.global_log.loc[idx, 'trial_nr'] = self.trial_nr
+                self.session.global_log.loc[idx, 'event_type'] = event_type
+                self.session.global_log.loc[idx, 'response'] = key
+ 
+                for param, val in self.parameters.items():
+                    self.session.global_log.loc[idx, param] = val
+
+        
                     
 
 

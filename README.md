@@ -10,6 +10,12 @@ This is repository for a simple binocular rivalry experiment. It is meant to wor
 
 **Execution**
 
-To execute the experiment run: python main.py sub-*xxx* ses-*x* 
+To execute the experiment run: python main.py sub-*xxx* ses-*x*
+
+**NOTE** 
+
+- Trial counting starts with 1 
+- The break is zero
+
 
 

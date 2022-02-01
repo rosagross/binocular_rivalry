@@ -27,3 +27,4 @@ Task settings:
     Break duration: 3 # duration in s
     Stimulus path: './stimuli/'
     Screenshot: True # makes a screenshot when aborting experiment
+    Exit key: 'q'
