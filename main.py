@@ -26,7 +26,7 @@ def main():
     output_str = subject + '_' + sess
     output_dir = './output_data/'+output_str+'_Logs'
     settings_file = './settings.yml'
-    eyetracker_on = False
+    eyetracker_on = True
 
     if not os.path.exists('./output_data'):
         os.mkdir('./output_data')

@@ -122,7 +122,6 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         print("-------------RUN SESSION---------------")
         self.display_text('Press SPACE to start experiment', keys='space')
         
-        # TODO: check if start recording comes after start experiment
         if self.eyetracker_on:
             self.calibrate_eyetracker()
             self.start_recording_eyetracker()
