@@ -1,0 +1,4 @@
+trial_nr	onset	event_type	phase	response	nr_frames	block_type	trial_type	onset_abs	duration
+0	0.011440400034189224	stim	0		0	break	break	8.47170630004257	-1.7963201999664307
+0	-1.7848797999322414	break	0	escape	0	break	break	6.675386100076139	1.3561183996498585
+0	-0.42876140028238297	break	0	escape	46	break	break	8.031504499725997	1.224908099975437

@@ -20,10 +20,10 @@ monitor:
 operating system: linux
 
 Task settings: 
-    Response interval: 0.8 # time in s you allow the participant to respond that still counts as correct response (only relevant for unambiguous stimuli)
-    Unambiguous trials: 10 # total nr of times the stimulus is shown - house OR face (trials = switches + 1)
+    Response interval: 1 # time in s you allow the participant to respond that still counts as correct response (only relevant for unambiguous stimuli)
+    Unambiguous trials: 6 # (this is PER unambiguous BLOCK) should be an even nr. to have equally often face and house 
     Blocks: 4 # e.g. 4 blocks would mean 2 rivalry and 2 unambiguous (alternated)
-    Stimulus duration rivalry: 120 # 120 (2mins) duration in s
+    Stimulus duration rivalry: 20 # 120 (2mins) duration in s
     Break duration: 3 # duration in s
     Stimulus path: './stimuli/'
     Screenshot: False # makes a screenshot when aborting experiment

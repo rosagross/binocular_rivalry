@@ -1,0 +1,930 @@
+4.6131 	WARNING 	Speech-to-text recognition module not available (use command `pip install SpeechRecognition` to get it. Transcription will be unavailable.
+4.6985 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+5.3472 	WARNING 	Actual framerate: 120.03789 (1 frame = 0.00833)
+5.3662 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Circle', opacity=0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='deg', vertices=ndarray(...), win=Window(...))
+5.7340 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, fillColor=array([-1, -1, -1]), fillColorSpace='rgb', fillRGB=array([-1, -1, -1]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1, -1, -1]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='pix', vertices=ndarray(...), win=Window(...))
+5.7369 	EXP 	Created unnamed Circle = Circle(__class__=<class 'psychopy.visual.circle.Circle'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace='rgb', contrast=None, depth=0, fillColor=array([0, 0, 0]), fillColorSpace='rgb', fillRGB=array([0, 0, 0]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0, 0, 0]), lineWidth=1.5, name='unnamed Circle', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), units='pix', vertices=ndarray(...), win=Window(...))
+6.7702 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, image='./stimuli/replay_house.bmp', interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([5.95067589, 5.95067589]), texRes=128, units='deg', win=Window(...))
+6.7928 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, image='./stimuli/replay_face.bmp', interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([5.95067589, 5.95067589]), texRes=128, units='deg', win=Window(...))
+6.8108 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, image='./stimuli/rivalry.bmp', interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([5.95067589, 5.95067589]), texRes=128, units='deg', win=Window(...))
+6.8249 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, image='./stimuli/fixation.bmp', interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([5.95067589, 5.95067589]), texRes=128, units='deg', win=Window(...))
+7.4290 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+24.9442 	DATA 	Keypress: c
+24.9498 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+24.9801 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+24.9801 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+78.6568 	DATA 	Keypress: c
+113.1696 	DATA 	Keypress: return
+114.5120 	DATA 	Keypress: space
+119.0357 	DATA 	Keypress: q
+121.3777 	DATA 	Keypress: z
+122.4133 	DATA 	Keypress: x
+131.6658 	DATA 	Keypress: return
+145.6063 	DATA 	Keypress: return
+145.8085 	DATA 	Keypress: return
+146.3977 	DATA 	Keypress: space
+146.6406 	DATA 	Keypress: space
+147.1219 	DATA 	Keypress: c
+155.4100 	DATA 	Keypress: lctrl
+155.5482 	DATA 	Keypress: c
+158.3381 	DATA 	Keypress: a
+158.7204 	DATA 	Keypress: s
+158.9794 	DATA 	Keypress: d
+159.2281 	DATA 	Keypress: f
+159.5525 	DATA 	Keypress: g
+159.8421 	DATA 	Keypress: h
+160.9317 	DATA 	Keypress: f1
+163.7140 	DATA 	Keypress: lalt
+177.6473 	DATA 	Keypress: 4
+178.8443 	DATA 	Keypress: 3
+179.7245 	DATA 	Keypress: 1
+180.2203 	DATA 	Keypress: return
+180.9185 	DATA 	Keypress: 2
+182.0503 	DATA 	Keypress: 2
+206.3487 	DATA 	Keypress: escape
+206.4988 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+214.3059 	DATA 	Keypress: c
+214.3120 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+214.3895 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+214.3895 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+252.2714 	DATA 	Keypress: 4
+254.6005 	DATA 	Keypress: 4
+255.9023 	DATA 	Keypress: 3
+257.0768 	DATA 	Keypress: 1
+258.0449 	DATA 	Keypress: return
+259.4313 	DATA 	Keypress: 2
+289.2373 	DATA 	Keypress: space
+290.3231 	DATA 	Keypress: c
+291.8213 	DATA 	Keypress: escape
+291.9539 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+301.6610 	DATA 	Keypress: c
+301.6661 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+301.7410 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+301.7410 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+302.3673 	DATA 	Keypress: c
+304.1650 	DATA 	Keypress: escape
+304.3016 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+330.6554 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+330.7384 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+330.7384 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+346.9714 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+346.9714 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+348.1383 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+348.1383 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+377.8099 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+377.8099 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+382.4850 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+382.4850 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+391.5361 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+391.5361 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+393.2113 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+393.2113 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+403.5741 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+403.5741 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+404.9239 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+404.9239 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+405.9682 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+407.8547 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+407.9320 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+407.9320 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+427.6671 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+429.6048 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+429.6831 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+429.6831 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+438.4129 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+438.4129 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+439.7961 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+439.7961 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+441.7543 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+441.7543 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+442.7875 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+442.7875 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+443.8124 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+443.8124 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+444.8290 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+444.8290 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+447.1372 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+447.1372 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+448.2538 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+448.2538 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+449.2871 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+449.2871 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+466.2996 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+476.1693 	DATA 	Keypress: 3
+548.2194 	DATA 	Keypress: c
+548.2255 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+548.3122 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+548.3122 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+621.2601 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+621.2601 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+622.4061 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+622.4061 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+640.7885 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+640.7885 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+654.5148 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+654.5148 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+656.0400 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+656.0400 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+682.3355 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+682.3355 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+686.4110 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+686.4110 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+692.9286 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+692.9286 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+693.9537 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+693.9537 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+699.3332 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+699.3332 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+700.4331 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+700.4331 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+701.4663 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+701.4663 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+702.4912 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+702.4912 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+703.5078 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+703.5078 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+704.5161 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+704.5161 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+711.4819 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+722.7682 	DATA 	Keypress: space
+724.2744 	DATA 	Keypress: space
+725.4523 	DATA 	Keypress: return
+725.4805 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+725.4962 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+725.5088 	WARNING 	TextStim.alignVert is deprecated. Use the anchorVert attribute instead
+725.5088 	WARNING 	TextStim.alignHoriz is deprecated. Use alignText and anchorHoriz attributes instead
+725.5183 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignText='center', alignVert='top', anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=28, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 525.]), rgb=UNKNOWN, text='Camera:  LEFT      Threshold:  P=60    CR=228 ', units='pix', win=Window(...), wrapWidth=1536.0)
+725.7973 	EXP 	Created unnamed ImageStim = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, image=Image(...), interpolate=False, mask=None, maskParams=None, name='unnamed ImageStim', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([6.34738761, 4.76054071]), texRes=128, units='deg', win=Window(...))
+725.8498 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+725.8498 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38160>
+725.9331 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+725.9331 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38400>
+726.0140 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.0140 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF385C0>
+726.0915 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.0915 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38D30>
+726.1748 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.1748 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38CF8>
+726.2582 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.2582 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38D68>
+726.3415 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.3415 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38DA0>
+726.4248 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.4248 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38E10>
+726.5056 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.5056 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38E80>
+726.5889 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.5889 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38EF0>
+726.6665 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.6665 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38F60>
+726.7499 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.7499 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38EF0>
+726.8332 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.8332 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38F60>
+726.9165 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.9165 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF38C88>
+726.9972 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+726.9972 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C160>
+727.0805 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.0805 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C1D0>
+727.1582 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.1582 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C240>
+727.2416 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.2416 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C2B0>
+727.3249 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.3249 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF18F60>
+727.4083 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.4083 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF0A240>
+727.4888 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.4888 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF18630>
+727.5721 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.5721 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF0A240>
+727.6500 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.6500 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF28C18>
+727.7333 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.7333 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF28C88>
+727.8166 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.8166 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF28438>
+727.9000 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.9000 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF28C88>
+727.9805 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+727.9805 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF28438>
+728.0638 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.0638 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF286D8>
+728.1471 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.1471 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C1D0>
+728.2250 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.2250 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C0B8>
+728.3083 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.3083 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C320>
+728.3917 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.3917 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C3C8>
+728.4750 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.4750 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C438>
+728.5554 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.5554 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C4A8>
+728.6387 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.6387 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C518>
+728.7167 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.7167 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C588>
+728.8001 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.8001 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C5F8>
+728.8834 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.8834 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C668>
+728.9668 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+728.9668 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C6D8>
+729.0471 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.0471 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C748>
+729.1303 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.1303 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C7B8>
+729.2085 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.2085 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C828>
+729.2918 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.2918 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C898>
+729.3751 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.3751 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C908>
+729.4585 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.4585 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C978>
+729.5387 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.5387 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88C9E8>
+729.6220 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.6220 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CA58>
+729.7001 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.7001 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CAC8>
+729.7835 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.7835 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CB38>
+729.8668 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.8668 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CBA8>
+729.9502 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+729.9502 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CC18>
+730.0303 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.0303 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CC88>
+730.1136 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.1136 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CCF8>
+730.1970 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.1970 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CD68>
+730.2752 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.2752 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CDD8>
+730.3586 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.3586 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CE48>
+730.4419 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.4419 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CEB8>
+730.5219 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.5219 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CF28>
+730.6053 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.6053 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CF98>
+730.6886 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.6886 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D88CF28>
+730.7669 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.7669 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF286D8>
+730.8503 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.8503 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D1D0>
+730.9336 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+730.9336 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D278>
+731.0170 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.0170 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D320>
+731.0969 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.0969 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D3C8>
+731.1802 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.1802 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D470>
+731.2635 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.2635 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D518>
+731.3420 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.3420 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D5C0>
+731.4253 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.4253 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D5F8>
+731.5087 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.5087 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D668>
+731.5885 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.5885 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D6D8>
+731.6718 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.6718 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D748>
+731.7504 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.7504 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D7B8>
+731.8337 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.8337 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D828>
+731.9171 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+731.9171 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D898>
+732.0004 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.0004 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D908>
+732.0801 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.0801 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D978>
+732.1634 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.1634 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D9E8>
+732.2468 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.2468 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DA58>
+732.3255 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.3255 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DAC8>
+732.4088 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.4088 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DB38>
+732.4922 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.4922 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DBA8>
+732.5717 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.5717 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DC18>
+732.6551 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.6551 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DC88>
+732.7384 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.7384 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DCF8>
+732.8172 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.8172 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DD68>
+732.9006 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.9006 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DDD8>
+732.9839 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+732.9839 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DE48>
+733.0673 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.0673 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DEB8>
+733.1467 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.1467 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DF28>
+733.2300 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.2300 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DF98>
+733.3090 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.3090 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89DF28>
+733.3923 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.3923 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF286D8>
+733.4756 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.4756 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D3C8>
+733.5550 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.5550 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2198>
+733.6383 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.6383 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2208>
+733.7216 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.7216 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2278>
+733.8050 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.8050 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A22E8>
+733.8840 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.8840 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2358>
+733.9674 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+733.9674 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A23C8>
+734.0507 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.0507 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2438>
+734.1299 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.1299 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A24A8>
+734.2133 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.2133 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2518>
+734.2966 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.2966 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2588>
+734.3758 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.3758 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A25F8>
+734.4591 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.4591 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2668>
+734.5424 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.5424 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A26D8>
+734.6216 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.6216 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2748>
+734.7049 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.7049 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A27B8>
+734.7882 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.7882 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2828>
+734.8675 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.8675 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2898>
+734.9509 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+734.9509 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2908>
+735.0342 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.0342 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2978>
+735.1132 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.1132 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A29E8>
+735.1965 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.1965 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2A58>
+735.2799 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.2799 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2AC8>
+735.3632 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.3632 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2B38>
+735.4426 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.4426 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2BA8>
+735.5259 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.5259 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2C18>
+735.6048 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.6048 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2C88>
+735.6882 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.6882 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2CF8>
+735.7715 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.7715 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2D68>
+735.8548 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.8548 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2DD8>
+735.9343 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+735.9343 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2E48>
+736.0177 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.0177 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2EB8>
+736.0964 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.0964 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2F28>
+736.1798 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.1798 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2F98>
+736.2631 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.2631 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2F28>
+736.3464 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.3464 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D89D3C8>
+736.4261 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.4261 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8A2160>
+736.5094 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.5094 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF198>
+736.5927 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.5927 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF208>
+736.6714 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.6714 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF278>
+736.7548 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.7548 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF2E8>
+736.8381 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.8381 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF358>
+736.9179 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+736.9179 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF3C8>
+737.0011 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.0011 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF438>
+737.0845 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.0845 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF4A8>
+737.1631 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.1631 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF518>
+737.2464 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.2464 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF588>
+737.3297 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.3297 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF5F8>
+737.4130 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.4130 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF668>
+737.4929 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.4929 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF6D8>
+737.5762 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.5762 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF748>
+737.6596 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.6596 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF7B8>
+737.7380 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.7380 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF828>
+737.8213 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.8213 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF898>
+737.9046 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.9046 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF908>
+737.9846 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+737.9846 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8AF978>
+738.0429 	DATA 	Keypress: return
+738.0803 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+738.1029 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+740.0074 	DATA 	Keypress: return
+740.0459 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+740.0595 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+740.3516 	EXP 	unnamed TextStim: text = 'Camera:  LEFT      Threshold:  P=60    CR=228 '
+740.3516 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.3516 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F0185C41B38>
+740.3766 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.3766 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01B940>
+740.4462 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.4462 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01BBE0>
+740.5266 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.5266 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01BD30>
+740.6100 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.6100 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01BBE0>
+740.6933 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.6933 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F0185C41B38>
+740.7712 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.7712 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01BCF8>
+740.8545 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.8545 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B90B8>
+740.9378 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+740.9378 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9198>
+741.0212 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.0212 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B90F0>
+741.1017 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.1017 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9358>
+741.1851 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.1851 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9278>
+741.2628 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.2628 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9630>
+741.3461 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.3461 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B96A0>
+741.4295 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.4295 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9710>
+741.5128 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.5128 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9780>
+741.5935 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.5935 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B97F0>
+741.6768 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.6768 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9860>
+741.7545 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.7545 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B98D0>
+741.8378 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.8378 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9940>
+741.9211 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+741.9211 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B99B0>
+742.0044 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.0044 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9A20>
+742.0852 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.0852 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9A90>
+742.1685 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.1685 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9B00>
+742.2461 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.2461 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9B70>
+742.3294 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.3294 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9BE0>
+742.4128 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.4128 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9C50>
+742.4961 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.4961 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9CC0>
+742.5769 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.5769 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9D30>
+742.6603 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.6603 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9DA0>
+742.7378 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.7378 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9E10>
+742.8211 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.8211 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9E80>
+742.9045 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.9045 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9EF0>
+742.9878 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+742.9878 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9F60>
+743.0711 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.0711 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9EF0>
+743.1520 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.1520 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9F60>
+743.2294 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.2294 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9128>
+743.3128 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.3128 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846160>
+743.3961 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.3961 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8461D0>
+743.4795 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.4795 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846240>
+743.5628 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.5628 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8462B0>
+743.6437 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.6437 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846320>
+743.7271 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.7271 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846390>
+743.8044 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.8044 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846400>
+743.8938 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.8938 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846470>
+743.9711 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+743.9711 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017B01BC50>
+744.0544 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.0544 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B94E0>
+744.1355 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.1355 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9240>
+744.2188 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.2188 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9208>
+744.2961 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.2961 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9438>
+744.3794 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.3794 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9208>
+744.4628 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.4628 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF0A048>
+744.5461 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.5461 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9518>
+744.6272 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.6272 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017AF0A048>
+744.7105 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.7105 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8B9518>
+744.7877 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.7877 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846080>
+744.8710 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.8710 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8460F0>
+744.9544 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+744.9544 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846550>
+745.0377 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.0377 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8465C0>
+745.1210 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.1210 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846630>
+745.2023 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.2023 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8466A0>
+745.2794 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.2794 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846710>
+745.3626 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.3626 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846780>
+745.4460 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.4460 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8467F0>
+745.5292 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.5292 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846860>
+745.6126 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.6126 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8468D0>
+745.6940 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.6940 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846940>
+745.7710 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.7710 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8469B0>
+745.8542 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.8542 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846A20>
+745.9375 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+745.9375 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846A90>
+746.0208 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.0208 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846B00>
+746.1041 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.1041 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846B70>
+746.1874 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.1874 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846BE0>
+746.2691 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.2691 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846C50>
+746.3457 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.3457 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846CC0>
+746.4291 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.4291 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846D30>
+746.5124 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.5124 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846DA0>
+746.5957 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.5957 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846E10>
+746.6790 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.6790 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846E80>
+746.7608 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.7608 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846EF0>
+746.8373 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.8373 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846F60>
+746.9207 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+746.9207 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846EF0>
+747.0040 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.0040 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D846F60>
+747.0042 	DATA 	Keypress: space
+747.0873 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.0873 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F198>
+747.1706 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.1706 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F1D0>
+747.2527 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.2527 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F240>
+747.3290 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.3290 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F2B0>
+747.4123 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.4123 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F320>
+747.4956 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.4956 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F390>
+747.5789 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.5789 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F400>
+747.6623 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.6623 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F470>
+747.6834 	DATA 	Keypress: space
+747.7456 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.7456 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F550>
+747.8279 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.8279 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F588>
+747.9039 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.9039 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F5F8>
+747.9872 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+747.9872 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F668>
+748.0705 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.0705 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F6D8>
+748.1539 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.1539 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F748>
+748.2372 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.2372 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F7B8>
+748.3197 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.3197 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F828>
+748.3955 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.3955 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F898>
+748.4864 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.4864 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F908>
+748.5621 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.5621 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F128>
+748.6454 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+748.6454 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84F978>
+748.6874 	DATA 	Keypress: return
+748.6936 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+748.7087 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+749.3550 	DATA 	Keypress: return
+749.3917 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+749.4088 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+749.7034 	EXP 	unnamed TextStim: text = 'Camera:  LEFT      Threshold:  P=60    CR=228 '
+749.7034 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+749.7034 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FB70>
+749.7287 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+749.7287 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FC50>
+749.7952 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+749.7952 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FB00>
+749.8704 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+749.8704 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FD30>
+749.9537 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+749.9537 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FAC8>
+750.0370 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.0370 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FD30>
+750.1203 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.1203 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FAC8>
+750.2037 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.2037 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FE48>
+750.2870 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.2870 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856550>
+750.3702 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.3702 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856668>
+750.4453 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.4453 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8560B8>
+750.5287 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.5287 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8569B0>
+750.6120 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.6120 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856978>
+750.6953 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.6953 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856A58>
+750.7787 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.7787 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856AC8>
+750.8619 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.8619 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856B38>
+750.9370 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+750.9370 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856BA8>
+751.0203 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.0203 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856C18>
+751.1036 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.1036 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856C88>
+751.1870 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.1870 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856CF8>
+751.2703 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.2703 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856D68>
+751.3453 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.3453 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856DD8>
+751.4286 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.4286 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856E48>
+751.5119 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.5119 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856EB8>
+751.5953 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.5953 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856F28>
+751.6786 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.6786 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856F98>
+751.7620 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.7620 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856F28>
+751.8453 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.8453 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FE48>
+751.9203 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+751.9203 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856898>
+752.0036 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.0036 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861198>
+752.0870 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.0870 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8568D0>
+752.1703 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.1703 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856630>
+752.2536 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.2536 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856588>
+752.3370 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.3370 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8566D8>
+752.4120 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.4120 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8560F0>
+752.4953 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.4953 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856160>
+752.5786 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.5786 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8562B0>
+752.6619 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.6619 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856470>
+752.7453 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.7453 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856048>
+752.8286 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.8286 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856198>
+752.9037 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.9037 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856080>
+752.9870 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+752.9870 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8561D0>
+753.0704 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.0704 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856128>
+753.1537 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.1537 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D856278>
+753.2370 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.2370 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FBA8>
+753.3203 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.3203 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FDA0>
+753.3953 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.3953 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FBA8>
+753.4787 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.4787 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FDA0>
+753.5620 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.5620 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FEF0>
+753.6453 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.6453 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8610B8>
+753.7287 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.7287 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861128>
+753.8120 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.8120 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861278>
+753.8953 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.8953 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8612E8>
+753.9704 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+753.9704 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861358>
+754.0537 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.0537 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8613C8>
+754.1370 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.1370 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861438>
+754.2204 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.2204 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8614A8>
+754.3037 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.3037 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861518>
+754.3870 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.3870 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861588>
+754.4621 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.4621 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8615F8>
+754.5454 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.5454 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861668>
+754.6287 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.6287 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8616D8>
+754.7121 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.7121 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861748>
+754.7954 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.7954 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8617B8>
+754.8787 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.8787 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861828>
+754.9621 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+754.9621 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861898>
+755.0371 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.0371 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861908>
+755.1204 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.1204 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861978>
+755.2038 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.2038 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D8619E8>
+755.2871 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.2871 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861A58>
+755.3705 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.3705 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861AC8>
+755.4454 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.4454 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861B38>
+755.5288 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.5288 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861BA8>
+755.6121 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.6121 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861C18>
+755.6955 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.6955 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861C88>
+755.7788 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.7788 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861CF8>
+755.8622 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.8622 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861D68>
+755.9455 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+755.9455 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861DD8>
+756.0205 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.0205 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861E48>
+756.1039 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.1039 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861EB8>
+756.1872 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.1872 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861F28>
+756.2705 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.2705 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861F98>
+756.3539 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.3539 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861F28>
+756.4372 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.4372 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D84FEF0>
+756.5122 	EXP 	unnamed ImageStim: size = array([6.34738761, 4.76054071])
+756.5122 	EXP 	unnamed ImageStim: image = <PIL.Image.Image image mode=P size=640x480 at 0x7F017D861240>
+756.5338 	DATA 	Keypress: return
+756.5602 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+756.5756 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+759.8930 	DATA 	Keypress: c
+759.8986 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+759.9963 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+759.9963 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+766.0344 	DATA 	Keypress: c
+769.2183 	DATA 	Keypress: c
+774.8141 	DATA 	Keypress: space
+794.7347 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+794.7347 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+807.4196 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+807.4196 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+813.5238 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+813.5238 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+814.5316 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+814.5316 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+832.2284 	DATA 	Keypress: return
+834.7485 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+834.7485 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+872.4432 	DATA 	Keypress: return
+872.4788 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+872.4788 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+874.9417 	DATA 	Keypress: return
+874.9709 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+874.9709 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+876.7885 	DATA 	Keypress: return
+876.8462 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+876.8462 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+878.2710 	DATA 	Keypress: return
+885.3072 	DATA 	Keypress: return
+889.6272 	DATA 	Keypress: return
+893.9559 	DATA 	Keypress: return
+906.7898 	DATA 	Keypress: return
+919.9355 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+919.9355 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+960.1535 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+960.1535 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+964.7948 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+964.7948 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+980.7277 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+980.7277 	EXP 	unnamed Circle: pos = (-845.0, 449.0)
+985.4281 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+985.4281 	EXP 	unnamed Circle: pos = (0.0, 449.0)
+986.4366 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+986.4366 	EXP 	unnamed Circle: pos = (0.0, -448.0)
+987.4617 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+987.4617 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+988.4952 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+988.4952 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+1037.4305 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+1037.4305 	EXP 	unnamed Circle: pos = (844.0, 449.0)
+1039.1054 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+1039.1054 	EXP 	unnamed Circle: pos = (-845.0, -448.0)
+1046.7881 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+1046.7881 	EXP 	unnamed Circle: pos = (844.0, -0.0)
+1047.9047 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+1047.9047 	EXP 	unnamed Circle: pos = (-845.0, -0.0)
+1048.9214 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+1048.9214 	EXP 	unnamed Circle: pos = (844.0, -448.0)
+1049.9297 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+1049.9297 	EXP 	unnamed Circle: pos = (0.0, -0.0)
+1056.4616 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+1066.6609 	DATA 	Keypress: escape
+1066.6665 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=20, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([  0., 100.]), rgb=UNKNOWN, text=str(...), units='pix', win=Window(...), wrapWidth=500)
+1066.8457 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+1072.9847 	DATA 	Keypress: 4
+1073.9138 	DATA 	Keypress: 4
+1074.2848 	DATA 	Keypress: 4
+1078.6895 	DATA 	Keypress: space
+1078.6955 	EXP 	Created unnamed TextStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0, flipHoriz=False, flipVert=False, font='', fontFiles=[], height=1.0, italic=False, languageStyle='LTR', name='unnamed TextStim', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Press SPACE to start experiment', units='deg', win=Window(...), wrapWidth=15.0)
+1084.4122 	DATA 	Keypress: space
+1084.4123 	EXP 	window1: recordFrameIntervals = True
+1084.4507 	WARNING 	t of last frame was 24.97ms (=1/40)
+1098.1306 	DATA 	Keypress: 4
+1098.1417 	WARNING 	t of last frame was 15.10ms (=1/66)
+1098.1519 	WARNING 	t of last frame was 10.15ms (=1/98)
+1111.1536 	DATA 	Keypress: 3
+1114.9992 	DATA 	Keypress: q
+1115.0071 	WARNING 	t of last frame was 11.21ms (=1/89)
+1115.0071 	EXP 	window1: recordFrameIntervals = False
+1116.6945 	EXP 	window1: mouseVisible = True
