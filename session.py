@@ -6,7 +6,6 @@
 @contact :   grossmann.rc@gmail.com
 '''
 
-from cv2 import phase
 import numpy as np
 import os
 from psychopy.visual import ImageStim
