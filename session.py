@@ -6,10 +6,10 @@
 @contact :   grossmann.rc@gmail.com
 '''
 
+from cv2 import phase
 import numpy as np
 import os
 from psychopy.visual import ImageStim
-from psychopy import event
 from exptools2.core import PylinkEyetrackerSession
 from trial import BRTrial
 import random
@@ -20,26 +20,30 @@ opj = os.path.join
 class BinocularRivalrySession(PylinkEyetrackerSession):
 
     def __init__(self, output_str, output_dir, settings_file, subject_ID, eyetracker_on):
-        """ Initializes StroopSession object. 
+        """ Initializes BinocularRival object. 
       
         Parameters
         ----------
         output_str : str
-            Basename for all output-files (like logs), e.g., "sub-01_task-stroop_run-1"
+            Basename for all output-files (like logs)
         output_dir : str
             Path to desired output-directory (default: None, which results in $pwd/logs)
         settings_file : str
             Path to yaml-file with settings (default: None, which results in the package's
             default settings file (in data/default_settings.yml)
-        n_trials : int
-            Number of trials to present (a custom parameter for this class)
+        subject_ID : int
+            ID of the current participant
+        eyetracker_on : bool 
+            Determines if the cablibration process is getting started.
         """
         super().__init__(output_str, output_dir, settings_file, eyetracker_on=eyetracker_on)  # initialize using parent class constructor!
         self.subject_ID = subject_ID
-        self.nr_unambiguous_trials = self.settings['Task settings']['Unambiguous trials']
         self.n_blocks = self.settings['Task settings']['Blocks'] #  for now this can be set in the setting file! 
         self.stim_duration_rivalry = self.settings['Task settings']['Stimulus duration rivalry']
         self.path_to_stim = self.settings['Task settings']['Stimulus path']
+        self.stim_size = self.settings['Task settings']['Stimulus size']
+        self.previous_percept_duration = self.settings['Task settings']['Previous percept duration']
+        self.percept_jitter = self.settings['Task settings']['Percept duration jitter']
         self.phase_duration_break = self.settings['Task settings']['Break duration']
         self.exit_key = self.settings['Task settings']['Exit key']
         self.response_interval = self.settings['Task settings']['Response interval']
@@ -51,6 +55,9 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         self.correct_responses = 0 
         self.switch_times_mean = 0
         self.switch_times_std = 0 
+
+        # randomly choose if the participant responds with the right or the left hand
+        self.response_hand = 'left' if random.uniform(1,100) < 50 else 'right'
 
         if self.settings['Task settings']['Screenshot']==True:
             self.screen_dir=output_dir+'/'+output_str+'_Screenshots'
@@ -73,6 +80,24 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         trial_nr = 1
         block_ID_rivalry = 0 
         block_ID_unambig = 0 
+
+        # build an array with the possible color combinations 
+        # (has to be done BEFORE we construct the trials below)
+        color_combinations = ['redface', 'redhouse']
+        colors_list = []
+        # add the colorcombination alternatingly 
+        for i in range(int(self.n_blocks/2)):
+            # if there is an odd nr. of trials we should choose the last block randomly!
+            if ((self.n_blocks%2) != 0) and (i == self.n_blocks-1):
+                idx = 0 if random.uniform(1,100) < 50 else 1
+            else:
+                idx = 0 if (i%2)==0 else 1 
+                
+            colors_list.append(color_combinations[idx])
+
+        colors_rivalry = np.array(colors_list)
+        colors_ambiguous = np.array(colors_list)
+        
         for i in range(self.n_blocks):
             # we start counting with 1 because the blocks with ID 0 are breaks!
             block_ID = i + 1 
@@ -80,14 +105,19 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
             print("start condition", self.start_condition)
 
             # before every block we have an interstimulus interval where only the fixation is seen
-            self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', [self.phase_duration_break]))
+            self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break]))
 
             # equal subjects start with rivarly, unequal with unambiguous
             if (block_ID + self.start_condition) % 2 == 0:
                 block_ID_rivalry += 1
                 block_type = 'rivalry'
+                # determine type and color combination
+                np.random.shuffle(colors_rivalry)
                 trial_type = 'house_face'
-                self.trial_list.append(BRTrial(self, trial_nr, block_ID_rivalry, block_type, trial_type, [self.stim_duration_rivalry]))
+                color_comb = 'rivalry_' + colors_rivalry[0] 
+                colors_rivalry = colors_rivalry[1:]
+
+                self.trial_list.append(BRTrial(self, trial_nr, block_ID_rivalry, block_type, trial_type, color_comb, self.response_hand,[self.stim_duration_rivalry]))
                 print("appended trial nr", trial_nr)
                 trial_nr += 1 
 
@@ -98,6 +128,10 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
                 # but it should add up to the same duration for every unambiguous block)
                 phase_durations_unambiguous = self.create_duration_array()
                 print("durations unambiguous:", phase_durations_unambiguous)
+
+                np.random.shuffle(colors_ambiguous)
+                color_comb = colors_ambiguous[0] 
+                colors_ambiguous = colors_ambiguous[1:]
                 for i, phase_duration in enumerate(phase_durations_unambiguous):
                     # determine if next trial shows house or face
                     trial_type = 'house' if trial_nr % 2 == 0 else 'face'
@@ -105,11 +139,11 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
                     print("appended trial nr", trial_nr)
                     print("trial number in unabiguous:", i)
                     print("phase duration", phase_duration)
-                    self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, [phase_duration]))
+                    self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, color_comb, self.response_hand,[phase_duration]))
                     trial_nr += 1 
 
         # have one break in the very end
-        self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', [self.phase_duration_break]))
+        self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break]))
 
 
     def create_stimulus(self):
@@ -117,13 +151,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         This function creates house, face and rivalry stmiulus, as well as the fixation background. 
         The color of the stimulus can either be red or blue. This alternates among blocks.
         """
-        self.house_red = ImageStim(self.win, image=self.path_to_stim+'house_red.bmp')
-        self.house_blue = ImageStim(self.win, image=self.path_to_stim+'house_blue.bmp')
-        self.face_red = ImageStim(self.win, image=self.path_to_stim+'face_red.bmp')
-        self.face_blue = ImageStim(self.win, image=self.path_to_stim+'face_blue.bmp')
-        self.rivalry_redface = ImageStim(self.win, image=self.path_to_stim+'rivalry_redface.bmp')
-        self.rivalry_redhouse = ImageStim(self.win, image=self.path_to_stim+'rivalry_redhouse.bmp')
-        self.fixation_screen = ImageStim(self.win, image=self.path_to_stim+'fixation_screen.bmp')
+        self.house_red = ImageStim(self.win, image=self.path_to_stim+'house_red.bmp', units='deg', size=self.stim_size)
+        self.house_blue = ImageStim(self.win, image=self.path_to_stim+'house_blue.bmp', units='deg', size=self.stim_size)
+        self.face_red = ImageStim(self.win, image=self.path_to_stim+'face_red.bmp', units='deg', size=self.stim_size)
+        self.face_blue = ImageStim(self.win, image=self.path_to_stim+'face_blue.bmp', units='deg', size=self.stim_size)
+        self.rivalry_redface = ImageStim(self.win, image=self.path_to_stim+'rivalry_redface.bmp', units='deg', size=self.stim_size)
+        self.rivalry_redhouse = ImageStim(self.win, image=self.path_to_stim+'rivalry_redhouse.bmp', units='deg', size=self.stim_size)
+        self.fixation_screen = ImageStim(self.win, image=self.path_to_stim+'fixation_screen.bmp', units='deg', size=self.stim_size)
         self.test_colours = ImageStim(self.win, image=self.path_to_stim+'test.bmp')
 
 
@@ -135,17 +169,17 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
 
         # I know this is ugly, but I don't know how to make it more beautiful atm..
         if self.current_trial.trial_type == 'house_face':
-            if (self.current_trial.block_ID % 2) == 0:
+            if self.current_trial.color_comb == 'rivalry_redhouse':
                 self.rivalry_redhouse.draw()
             else:
                 self.rivalry_redface.draw()
         elif self.current_trial.trial_type == 'face':
-            if (self.current_trial.block_ID % 2) == 0:
+            if self.current_trial.color_comb == 'redface':
                 self.face_red.draw()
             else: 
                 self.face_blue.draw()
         elif self.current_trial.trial_type == 'house':
-            if (self.current_trial.block_ID % 2) == 0:
+            if self.current_trial.color_comb == 'redface':
                 self.house_blue.draw()
             else: 
                 self.house_red.draw()
@@ -163,11 +197,10 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         
         self.test_colours.draw()
         self.display_text(' ', keys='space')
-        # give some intructions for the participant
+        # give some instructions for the participant
         self.display_text('Please fixate the middle of the screen for the entire time\n'
-                            'of the experiment. Please press'
-                            ' the button when the image changes from the '
-                            'house to the face and vice versa.' , keys='space')
+                            'of the experiment.' , keys='space')
+        self.display_text(f'Please press the button with your {self.response_hand} hand\n when you perceive a change in the displayed image.' , keys='space')
         self.display_text('Press SPACE to start experiment', keys='space')
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
@@ -186,33 +219,38 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         """
         Function that takes the duration entries from the setting file and constructs the 
         phase duration (duration of trial and ISI) for all trials. 
+        The jitter is added to the mean percept duration from previous studies. If the jitter is
+        0.1s, a random nr between -0.1 and 0.1 is added. 
         """
-        total_duration = self.stim_duration_rivalry
-        nr_switches = self.nr_unambiguous_trials - 1
 
-        assert total_duration  >= nr_switches >= 1
-
-        # compute how long one trial would take in an equal split
-        equal_duration = total_duration/self.nr_unambiguous_trials
-
-        # draw jitters for every switch
-        stdv = 1
-        total_time = []
-        for _ in range(nr_switches):
-            jitter = np.random.normal(scale=stdv)
-            trial_time = equal_duration + jitter
-            total_time.append(trial_time)
+        # while the number is not above the trial duration, generate more trial durations
+        max_duration = self.stim_duration_rivalry
+        current_duration = 0 
+        phase_durations = []
+        while True:
+            percept_duration = self.previous_percept_duration + random.uniform(-self.percept_jitter, self.percept_jitter)
+            current_duration = np.array(phase_durations).sum() + percept_duration
+            if current_duration > max_duration:
+                break
             
-        durations_sum = np.array(total_time).sum()
-        duration_difference = total_duration - durations_sum
+            phase_durations.append(percept_duration)
+             
+        current_duration = np.array(phase_durations).sum()
+        duration_difference = max_duration - current_duration
         # append whats missing to the last trial
-        total_time.append(duration_difference)
-        print("length unambiguous block (with jitter)", len(total_time))
-        print(total_time)
-        return total_time
+        phase_durations.append(duration_difference)
+        print("duration unambiguous block:", np.array(phase_durations).sum(), "and length:", len(phase_durations))
+        self.nr_unambiguous_trials = len(phase_durations)
+        print(phase_durations)
+        return phase_durations
 
 
     def calc_percept_durations(self):
+        """
+        Calculates the average percept duration of in the rivalry block.
+        We leave out the first and last percept duration since they are determined by 
+        the trial timing.
+        """
         data_rivalry = self.global_log.loc[self.global_log['block_type'] == 'rivalry']
         # compute the average duration 
         unique_rivalry_block = data_rivalry['trial_nr'].unique()
@@ -220,7 +258,6 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
 
         for rivalry_block in unique_rivalry_block:
             block = data_rivalry.loc[data_rivalry['trial_nr'] == rivalry_block]
-
             for i in range(len(block['onset'])-1):
                 # start with the second onset (which is the first button press/first switch)
                 current_onset = block['onset'].iloc[i+1]
@@ -242,12 +279,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         print('STD of duration between switches:', self.switch_times_std)
         print(f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change): {self.correct_responses}")
         print("Expected responses:", (self.nr_unambiguous_trials-1) * (self.n_blocks/2))
-        np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npy'), {"Expected number of responses (unambiguous)": (self.nr_unambiguous_trials-1) * (self.n_blocks/2),
-        														                      "Subject responses (unambiguous)": self.unambiguous_responses,
-                                                                                      "Subject responses (rivalry)" : self.rivalry_responses,
-        														                      f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
-                                                                                      "Average percept duration across all rivalry blocks" : self.switch_times_mean,
-                                                                                      "Stadard deviation percept duration across all rivalry blocks" : self.switch_times_std})
+        np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npy'), {"Reponse hand" : self.response_hand,
+                                                                                     "Expected number of responses (unambiguous)": (self.nr_unambiguous_trials-1) * (self.n_blocks/2),
+        														                     "Subject responses (unambiguous)": self.unambiguous_responses,
+                                                                                     "Subject responses (rivalry)" : self.rivalry_responses,
+        														                     f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
+                                                                                     "Average percept duration across all rivalry blocks" : self.switch_times_mean,
+                                                                                     "Stadard deviation percept duration across all rivalry blocks" : self.switch_times_std})
         
 
 

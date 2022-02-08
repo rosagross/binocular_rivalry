@@ -6,8 +6,6 @@
 @contact :   grossmann.rc@gmail.com
 '''
 
-
-from urllib import response
 from psychopy import event
 import numpy as np
 from exptools2.core.trial import Trial
@@ -22,11 +20,13 @@ class BRTrial(Trial):
     whereas the unambiguous block has several trials, since it alternates between the house and face stimulus.
     """
 
-    def __init__(self, session, trial_nr, block_ID, block_type, trial_type, phase_duration, *args, **kwargs):
+    def __init__(self, session, trial_nr, block_ID, block_type, trial_type, color_comb, response_hand, phase_duration, *args, **kwargs):
         
         super().__init__(session, trial_nr, phase_duration,
                          parameters={'block_type': block_type,
                                      'trial_type': trial_type, 
+                                     'color_comb': color_comb,
+                                     'response_hand': response_hand,
                                      'phase_duration' : phase_duration},
                          verbose=False, *args, **kwargs)
         
@@ -35,6 +35,7 @@ class BRTrial(Trial):
         self.block_ID = block_ID
         self.block_type = block_type
         self.trial_type = trial_type # this can be either house_face, house or face
+        self.color_comb = color_comb # either redface or redhouse, used to draw correct image
         
             
     def draw(self):
@@ -65,11 +66,11 @@ class BRTrial(Trial):
                     response_delay = t - self.session.global_log.loc[idx-1, 'onset']
                     print("\nresponse delay:", response_delay)
                     print("previous timing:", self.session.global_log.loc[idx-1, 'onset'])
-                    if response_delay <= self.session.response_interval:
+                    if (response_delay >= self.session.response_interval[0]) and (response_delay <= self.session.response_interval[1]):
                         print("delay (within reponse interval!):", response_delay)
                         self.session.correct_responses += 1 
                     else:
-                        print("respone took too long!")
+                        print("respone took too long or was too quick!")
                 
                 if self.block_type == 'rivalry':
                     self.session.rivalry_responses += 1

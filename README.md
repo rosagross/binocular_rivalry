@@ -17,7 +17,8 @@ To execute the experiment run: python main.py sub-*xxx* ses-*x*
 
 - Trial counting starts with 1
 - The breaks have trialID and blockID of '0'
-- Randomization of blue/red images: blocks with an even ID (couted per condition), are rivalry_redhouse, red_face and blue_house. Odd IDs are rivalry_redface, blue_face and red_house. Example: if the first block is an unambiguous block, it will have trial ID 1. This should display the face in blue and the house in red. Then the next block will be a rivarly block with the ID 1 (since it is the first rivalry block) and thus show the red face and blue house. Other options to prevent that the subjects starting with ambiguous blocks will always see the red_house and blue_face combination: make it completely random and risking that many participant see the image colors in the same order, or making it change for every fourth participant.
+- The participant uses either the right or the left hand to respond. This is chosen completely randomly, when starting the session. Note, that when aborting a session and starting a new one, the response hand might have been changed! Carefully check the instructions in the beginning.
+- Randomization of blue/red images: there two cases that should be randomized:  1) rivalry is either rivalry_redhouse or rivalry_redface. 2) unambiguous blocks are either red_face and blue_house OR blue_face and red_houseblocks. For every block the color settings are randomized BUT it is made sure that the participant has had both combinations at least one time!
 
 <br>
 
