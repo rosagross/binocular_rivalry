@@ -58,6 +58,10 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         # randomly choose if the participant responds with the right or the left hand
         self.response_hand = 'left' if random.uniform(1,100) < 50 else 'right'
 
+        # randomly choose if the participant responds with the right BUTTON to house or face
+        self.response_button = 'right_house' if random.uniform(1,100) < 50 else 'right_face'
+
+
         if self.settings['Task settings']['Screenshot']==True:
             self.screen_dir=output_dir+'/'+output_str+'_Screenshots'
             if not os.path.exists(self.screen_dir):
@@ -199,7 +203,14 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         # give some instructions for the participant
         self.display_text('Please fixate the middle of the screen for the entire time\n'
                             'of the experiment.' , keys='space')
-        self.display_text(f'Please press the button with your {self.response_hand} hand\n when you perceive a change in the displayed image.' , keys='space')
+        self.display_text(f'Please use your {self.response_hand} hand\n to respond.' , keys='space')
+        
+        if self.response_button == 'right_house':
+            button_instructions = 'Press the right button when you see the house appear.\n Press the left button when you see the face appear.'
+        else:
+            button_instructions = 'Press the right button when you see the face appear.\n Press the left button when you see the house appear.'
+        
+        self.display_text(button_instructions, keys='space')
         self.display_text('Press SPACE to start experiment', keys='space')
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
@@ -274,11 +285,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         
         # calculate the mean duration of percepts in rivalry blocks
         self.calc_percept_durations()
+
         print('MEAN duration between switches:', self.switch_times_mean)
         print('STD of duration between switches:', self.switch_times_std)
         print(f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change): {self.correct_responses}")
         print("Expected responses:", (self.nr_unambiguous_trials-1) * (self.n_blocks/2))
         np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npy'), {"Reponse hand" : self.response_hand,
+                                                                                     "Response button" : self.response_button,
                                                                                      "Expected number of responses (unambiguous)": (self.nr_unambiguous_trials-1) * (self.n_blocks/2),
         														                     "Subject responses (unambiguous)": self.unambiguous_responses,
                                                                                      "Subject responses (rivalry)" : self.rivalry_responses,
