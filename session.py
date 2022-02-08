@@ -54,6 +54,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         self.correct_responses = 0 
         self.switch_times_mean = 0
         self.switch_times_std = 0 
+        self.nr_unambiguous_trials = 0
 
         # randomly choose if the participant responds with the right or the left hand
         self.response_hand = 'left' if random.uniform(1,100) < 50 else 'right'
@@ -250,7 +251,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         # append whats missing to the last trial
         phase_durations.append(duration_difference)
         print("duration unambiguous block:", np.array(phase_durations).sum(), "and length:", len(phase_durations))
-        self.nr_unambiguous_trials = len(phase_durations)
+        self.nr_unambiguous_trials = self.nr_unambiguous_trials + len(phase_durations)
         print(phase_durations)
         return phase_durations
 
@@ -285,14 +286,14 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         
         # calculate the mean duration of percepts in rivalry blocks
         self.calc_percept_durations()
-
+        expected_responds = self.nr_unambiguous_trials - (self.n_blocks/2)
         print('MEAN duration between switches:', self.switch_times_mean)
         print('STD of duration between switches:', self.switch_times_std)
         print(f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change): {self.correct_responses}")
-        print("Expected responses:", (self.nr_unambiguous_trials-1) * (self.n_blocks/2))
+        print("Expected responses:", expected_responds)
         np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npy'), {"Reponse hand" : self.response_hand,
                                                                                      "Response button" : self.response_button,
-                                                                                     "Expected number of responses (unambiguous)": (self.nr_unambiguous_trials-1) * (self.n_blocks/2),
+                                                                                     "Expected number of responses (unambiguous)": expected_responds,
         														                     "Subject responses (unambiguous)": self.unambiguous_responses,
                                                                                      "Subject responses (rivalry)" : self.rivalry_responses,
         														                     f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
