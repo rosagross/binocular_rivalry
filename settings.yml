@@ -14,7 +14,7 @@ window:
 monitor:
     name: default
     width: 69.8  # in cm
-    distance: 210  # in cm
+    distance: 198  # in cm
     gamma: 1
 
 operating system: linux

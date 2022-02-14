@@ -9,6 +9,7 @@
 from psychopy import event
 import numpy as np
 from exptools2.core.trial import Trial
+from psychopy.hardware import keyboard
 import os
 opj = os.path.join
 
@@ -45,9 +46,10 @@ class BRTrial(Trial):
 
     def get_events(self):
         """ Logs responses/triggers """
-        events = event.getKeys(timeStamped=self.session.clock)
-        if events:
-            if self.session.exit_key in [ev[0] for ev in events]: 
+
+        keys = self.session.kb.getKeys(waitRelease=True)
+        for thisKey in keys:
+            if thisKey=='q':  # it is equivalent to the string 'q'
                 print("End experiment!")
                 self.session.save_output()
 
@@ -56,8 +58,9 @@ class BRTrial(Trial):
                     self.session.win.saveMovieFrames(opj(self.session.screen_dir, self.session.output_str+'_Screenshot.png'))
                 self.session.close()
                 self.session.quit()
- 
-            for key, t in events:                
+            else: 
+                print(thisKey.name, thisKey.tDown, thisKey.rt)
+                t = thisKey.rt
                 idx = self.session.global_log.shape[0]     
                 if self.block_type == 'unambiguous':
                     self.session.unambiguous_responses += 1
@@ -77,13 +80,14 @@ class BRTrial(Trial):
                     self.session.total_responses += 1
 
                 event_type = self.trial_type
-
+                print("sessions clock", self.session.clock.getTime())
                        
                 self.session.global_log.loc[idx, 'event_type'] = event_type
                 self.session.global_log.loc[idx, 'trial_nr'] = self.trial_nr
                 self.session.global_log.loc[idx, 'onset'] = t
+                self.session.global_log.loc[idx, 'key_duration'] = thisKey.duration
                 self.session.global_log.loc[idx, 'phase'] = self.phase
-                self.session.global_log.loc[idx, 'response'] = key
+                self.session.global_log.loc[idx, 'response'] = thisKey.name
                 self.session.global_log.loc[idx, 'nr_frames'] = 0
 
                 for param, val in self.parameters.items():
