@@ -9,6 +9,7 @@
 import numpy as np
 import os
 from psychopy.visual import ImageStim
+from psychopy.hardware import keyboard
 from exptools2.core import PylinkEyetrackerSession
 from trial import BRTrial
 import random
@@ -57,10 +58,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         self.nr_unambiguous_trials = 0
 
         # randomly choose if the participant responds with the right or the left hand
-        self.response_hand = 'left' if random.uniform(1,100) < 50 else 'right'
+        self.response_hand = 'preferred' # 'left' if random.uniform(1,100) < 50 else 'right'
 
         # randomly choose if the participant responds with the right BUTTON to house or face
-        self.response_button = 'right_house' if random.uniform(1,100) < 50 else 'right_face'
+        self.response_button = 'upper_house' if random.uniform(1,100) < 50 else 'upper_face'
+
+        # initialize the keyboard for the button presses
+        self.kb = keyboard.Keyboard()
 
 
         if self.settings['Task settings']['Screenshot']==True:
@@ -162,8 +166,11 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         self.rivalry_redface = ImageStim(self.win, image=self.path_to_stim+'rivalry_redface.bmp', units='deg', size=self.stim_size)
         self.rivalry_redhouse = ImageStim(self.win, image=self.path_to_stim+'rivalry_redhouse.bmp', units='deg', size=self.stim_size)
         self.fixation_screen = ImageStim(self.win, image=self.path_to_stim+'fixation_screen.bmp', units='deg', size=self.stim_size)
-        self.test_colours = ImageStim(self.win, image=self.path_to_stim+'test.bmp')
-
+        self.test_colours = ImageStim(self.win, image=self.path_to_stim+'test.bmp', units='pix', size=768)
+        self.test_house_red = ImageStim(self.win, image=self.path_to_stim+'house_red.bmp', units='deg', size=self.stim_size/2, pos=[-2,-2])
+        self.test_house_blue = ImageStim(self.win, image=self.path_to_stim+'house_blue.bmp', units='deg', size=self.stim_size/2, pos=[2,-2])
+        self.test_face_red = ImageStim(self.win, image=self.path_to_stim+'face_red.bmp', units='deg', size=self.stim_size/2, pos=[-2,2])
+        self.test_face_blue = ImageStim(self.win, image=self.path_to_stim+'face_blue.bmp', units='deg', size=self.stim_size/2, pos=[2,2])
 
     def draw_stimulus(self):
         """ This function will be executed from the Trial instance, when the tiral runs. """
@@ -199,22 +206,27 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
             self.start_recording_eyetracker()
         
         
-        self.test_colours.draw()
+        #self.test_colours.draw()
+        self.test_house_red.draw()
+        self.test_house_blue.draw()
+        self.test_face_blue.draw()
+        self.test_face_red.draw()
         self.display_text(' ', keys='space')
         # give some instructions for the participant
         self.display_text('Please fixate the middle of the screen for the entire time\n'
                             'of the experiment.' , keys='space')
-        self.display_text(f'Please use your {self.response_hand} hand\n to respond.' , keys='space')
+        self.display_text(f'Please use your preferred hand\n to respond.' , keys='space')
         
-        if self.response_button == 'right_house':
-            button_instructions = 'Press the right button when you see the house appear.\n Press the left button when you see the face appear.'
+        if self.response_button == 'upper_house':
+            button_instructions = 'Press the upper button when you see the house appear.\n Press the lower button when you see the face appear.'
         else:
-            button_instructions = 'Press the right button when you see the face appear.\n Press the left button when you see the house appear.'
+            button_instructions = 'Press the upper button when you see the face appear.\n Press the lower button when you see the house appear.'
         
         self.display_text(button_instructions, keys='space')
         self.display_text('Press SPACE to start experiment', keys='space')
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
+        self.kb.clock.reset()
         
         for trial in self.trial_list:
             self.current_trial = trial 
@@ -291,6 +303,15 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         print('STD of duration between switches:', self.switch_times_std)
         print(f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change): {self.correct_responses}")
         print("Expected responses:", expected_responds)
+        np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npz'), {"Reponse hand" : self.response_hand,
+                                                                                     "Response button" : self.response_button,
+                                                                                     "Expected number of responses (unambiguous)": expected_responds,
+        														                     "Subject responses (unambiguous)": self.unambiguous_responses,
+                                                                                     "Subject responses (rivalry)" : self.rivalry_responses,
+        														                     f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
+                                                                                     "Average percept duration across all rivalry blocks" : self.switch_times_mean,
+                                                                                     "Standard deviation percept duration across all rivalry blocks" : self.switch_times_std})
+        
         np.save(opj(self.output_dir, self.output_str+'_summary_response_data.npy'), {"Reponse hand" : self.response_hand,
                                                                                      "Response button" : self.response_button,
                                                                                      "Expected number of responses (unambiguous)": expected_responds,
@@ -298,7 +319,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
                                                                                      "Subject responses (rivalry)" : self.rivalry_responses,
         														                     f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
                                                                                      "Average percept duration across all rivalry blocks" : self.switch_times_mean,
-                                                                                     "Stadard deviation percept duration across all rivalry blocks" : self.switch_times_std})
+                                                                                     "Standard deviation percept duration across all rivalry blocks" : self.switch_times_std})
         
 
 
