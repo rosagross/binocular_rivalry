@@ -26,6 +26,7 @@ class BRTrial(Trial):
         super().__init__(session, trial_nr, phase_duration,
                          parameters={'block_type': block_type,
                                      'trial_type': trial_type, 
+                                     'trial_nr': trial_nr, 
                                      'color_comb': color_comb,
                                      'response_hand': response_hand,
                                      'phase_duration' : phase_duration},
@@ -92,6 +93,10 @@ class BRTrial(Trial):
 
                 for param, val in self.parameters.items():
                     self.session.global_log.loc[idx, param] = val
+
+                if self.eyetracker_on:  # send message to eyetracker
+                    msg = f'start_type-{event_type}_trial-{self.trial_nr}_phase-{self.phase}_key-{thisKey.name}_time-{t}_duration-{thisKey.duration}'
+                    self.session.tracker.sendMessage(msg)
 
         
                     

@@ -36,6 +36,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         eyetracker_on : bool 
             Determines if the cablibration process is getting started.
         """
+            
         super().__init__(output_str, output_dir, settings_file, eyetracker_on=eyetracker_on)  # initialize using parent class constructor!
         self.subject_ID = subject_ID
         self.n_blocks = self.settings['Task settings']['Blocks'] #  for now this can be set in the setting file! 
@@ -223,7 +224,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
             button_instructions = 'Press the upper button when you see the face appear.\n Press the lower button when you see the house appear.'
         
         self.display_text(button_instructions, keys='space')
-        self.display_text('Press SPACE to start experiment', keys='space')
+        self.display_text('Are you ready to start the experiment?', keys='t')
         # this method actually starts the timer which keeps track of trial onsets
         self.start_experiment()
         self.kb.clock.reset()
