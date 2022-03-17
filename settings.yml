@@ -22,11 +22,15 @@ operating system: linux
 Task settings: 
     Response interval: [0.1, 1.5] # time in s you allow the participant to respond that still counts as correct response (only relevant for unambiguous stimuli)
     Blocks: 4 # e.g. 4 blocks would mean 2 rivalry and 2 unambiguous (alternated)
-    Previous percept duration: 2.3 # in s, mean of percept duration from previous studies (used to determine switches in unambiguos trials)
+    Previous percept duration: 5 # in s, mean of percept duration from previous studies (used to determine switches in unambiguos trials)
     Percept duration jitter: 0.1 # in s, added to the previous percept duration (0.1 would be a random UNIFORM jitter between -0.1 and 0.1)
     Stimulus duration rivalry: 20 # 120 (2mins) duration in s
-    Break duration: 3 # duration in s
+    Break duration: 1 # duration in s
+    Nr fading stimuli: 255
+    Transition length: 50 # in frames (here I mean screenticks!)
     Stimulus path: './stimuli/'
     Stimulus size: 10 # stimulus size in degrees (INCLUDING FIXATION!)
-    Screenshot: False # makes a screenshot when aborting experiment
+    Screenshot: False # makes a screenshot when aborting experiment (only use without a subject!!)
+    Test stimuli: False
     Exit key: 'q'
+    Monitor framerate: 60 # or 120Hz

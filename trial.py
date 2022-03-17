@@ -21,7 +21,7 @@ class BRTrial(Trial):
     whereas the unambiguous block has several trials, since it alternates between the house and face stimulus.
     """
 
-    def __init__(self, session, trial_nr, block_ID, block_type, trial_type, color_comb, response_hand, phase_duration, *args, **kwargs):
+    def __init__(self, session, trial_nr, block_ID, block_type, trial_type, color_comb, response_hand, phase_duration, timing, *args, **kwargs):
         
         super().__init__(session, trial_nr, phase_duration,
                          parameters={'block_type': block_type,
@@ -30,6 +30,7 @@ class BRTrial(Trial):
                                      'color_comb': color_comb,
                                      'response_hand': response_hand,
                                      'phase_duration' : phase_duration},
+                         timing = timing,
                          verbose=False, *args, **kwargs)
         
         # store if it is a rivalry trial or unambiguous trial 

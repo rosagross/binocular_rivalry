@@ -46,8 +46,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         self.previous_percept_duration = self.settings['Task settings']['Previous percept duration']
         self.percept_jitter = self.settings['Task settings']['Percept duration jitter']
         self.phase_duration_break = self.settings['Task settings']['Break duration']
+        self.nr_fading_stimuli = self.settings['Task settings']['Nr fading stimuli']
+        self.transition_length = self.settings['Task settings']['Transition length']
+        self.draw_test_stimuli = self.settings['Task settings']['Test stimuli']
         self.exit_key = self.settings['Task settings']['Exit key']
         self.response_interval = self.settings['Task settings']['Response interval']
+        self.monitor_refreshrate = self.settings['Task settings']['Monitor framerate']
+    
         
         # count the subjects responses for each condition
         self.unambiguous_responses = 0 
@@ -63,6 +68,13 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
 
         # randomly choose if the participant responds with the right BUTTON to house or face
         self.response_button = 'upper_house' if random.uniform(1,100) < 50 else 'upper_face'
+
+        # to be sure that we don't loose the phase, we make it more then 1 screentick   
+        self.refresh_stimulus_speed = int(self.monitor_refreshrate/30)
+        # we don't have to take every single fading picture, only if we would like to have it very smooth
+        self.transition_steps = int((self.nr_fading_stimuli/self.transition_length)*self.refresh_stimulus_speed)
+        # compute the phase duration array for the contrast fading transitions
+        self.transition_phases = [self.refresh_stimulus_speed]*int(self.transition_length/self.refresh_stimulus_speed)
 
         # initialize the keyboard for the button presses
         self.kb = keyboard.Keyboard()
@@ -114,7 +126,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
             print("start condition", self.start_condition)
 
             # before every block we have an interstimulus interval where only the fixation is seen
-            self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break]))
+            self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand, [self.phase_duration_break*self.monitor_refreshrate], 'frames'))
 
             # equal subjects start with rivarly, unequal with unambiguous
             if (block_ID + self.start_condition) % 2 == 0:
@@ -126,7 +138,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
                 color_comb = 'rivalry_' + colors_rivalry[0] 
                 colors_rivalry = colors_rivalry[1:]
 
-                self.trial_list.append(BRTrial(self, trial_nr, block_ID_rivalry, block_type, trial_type, color_comb, self.response_hand,[self.stim_duration_rivalry]))
+                self.trial_list.append(BRTrial(self, trial_nr, block_ID_rivalry, block_type, trial_type, color_comb, self.response_hand,[self.stim_duration_rivalry*self.monitor_refreshrate], 'frames'))
                 print("appended trial nr", trial_nr)
                 trial_nr += 1 
 
@@ -144,15 +156,54 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
                 for i, phase_duration in enumerate(phase_durations_unambiguous):
                     # determine if next trial shows house or face
                     trial_type = 'house' if trial_nr % 2 == 0 else 'face'
+                    
 
                     print("appended trial nr", trial_nr)
                     print("trial number in unabiguous:", i)
                     print("phase duration", phase_duration)
-                    self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, color_comb, self.response_hand,[phase_duration]))
+                    
+                    # we have to insert the transition period here (except for the last trial)
+                    # the trial nr, block ID and block and trial type stay the same as for the previous trial 
+                    # get the correct color combination
+                    if (trial_type=='house') & (color_comb=='redface'):
+                        fading_color = 'hb2fr'
+                    elif (trial_type=='face') & (color_comb=='redface'):
+                        fading_color = 'fr2hb'
+                    elif (trial_type=='house') & (color_comb=='redhouse'):
+                        fading_color = 'hr2fb'
+                    else:
+                        fading_color = 'fb2hr'
+
+                    if False: #self.nr_fading_stimuli != 0:
+                        
+                        
+                        # cut out the beginning and end of trial because the transition takes time (but the e)
+                        if ((i == len(phase_durations_unambiguous)-1) or (i == 0)):
+                            print('last or first')
+                            phase_duration_fading = phase_duration - int(self.transition_length/2) # in the beginning/end only cut half 
+                            print('phase duration fading', phase_duration_fading)
+                            self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, color_comb, self.response_hand,[phase_duration_fading], 'frames'))
+                            if i == 0:
+                                print('first transition')
+                                print('transition phases', self.transition_phases)
+                                self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, fading_color, self.response_hand, self.transition_phases, 'frames'))
+                            
+                        else:
+                            print('phase duration before', phase_duration)
+                            phase_duration_fading = phase_duration - self.transition_length
+                            print('phase duration sub fading', phase_duration_fading)
+                            self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, color_comb, self.response_hand, [phase_duration_fading], 'frames'))
+                            self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, fading_color, self.response_hand, self.transition_phases, 'frames'))
+                            
+                    else:
+                        print('phase duration NO transition', phase_duration, trial_type)
+                        #self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break], 'frames'))
+                        self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, color_comb, self.response_hand,[phase_duration], 'frames'))
+                        self.trial_list.append(BRTrial(self, trial_nr, block_ID_unambig, block_type, trial_type, fading_color, self.response_hand, self.transition_phases, 'frames'))
                     trial_nr += 1 
 
         # have one break in the very end
-        self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break]))
+        self.trial_list.append(BRTrial(self, 0, 0, 'break', 'break', 'break', self.response_hand,[self.phase_duration_break], 'frames'))
 
 
     def create_stimulus(self):
@@ -160,26 +211,47 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         This function creates house, face and rivalry stmiulus, as well as the fixation background. 
         The color of the stimulus can either be red or blue. This alternates among blocks.
         """
+
+        # simple, unambiguous non-fading stimuli 
         self.house_red = ImageStim(self.win, image=self.path_to_stim+'house_red.bmp', units='deg', size=self.stim_size)
         self.house_blue = ImageStim(self.win, image=self.path_to_stim+'house_blue.bmp', units='deg', size=self.stim_size)
         self.face_red = ImageStim(self.win, image=self.path_to_stim+'face_red.bmp', units='deg', size=self.stim_size)
         self.face_blue = ImageStim(self.win, image=self.path_to_stim+'face_blue.bmp', units='deg', size=self.stim_size)
+        # ambiguous stimuli
         self.rivalry_redface = ImageStim(self.win, image=self.path_to_stim+'rivalry_redface.bmp', units='deg', size=self.stim_size)
         self.rivalry_redhouse = ImageStim(self.win, image=self.path_to_stim+'rivalry_redhouse.bmp', units='deg', size=self.stim_size)
         self.fixation_screen = ImageStim(self.win, image=self.path_to_stim+'fixation_screen.bmp', units='deg', size=self.stim_size)
+        
+        # fading stimuli
+        self.fading_bluehouse_2_redface = []
+        self.fading_redhouse_2_blueface = []
+        self.fading_redface_2_bluehouse = []
+        self.fading_blueface_2_redhouse = []
+
+        for i in range(self.nr_fading_stimuli):
+            self.fading_bluehouse_2_redface.append(ImageStim(self.win, image=self.path_to_stim+f'fading/fading_hb2fr_{i}.bmp', units='deg', size=self.stim_size))
+            self.fading_redhouse_2_blueface.append(ImageStim(self.win, image=self.path_to_stim+f'fading/fading_hr2fb_{i}.bmp', units='deg', size=self.stim_size))
+            self.fading_redface_2_bluehouse.append(ImageStim(self.win, image=self.path_to_stim+f'fading/fading_hb2fr_{self.nr_fading_stimuli-1-i}.bmp', units='deg', size=self.stim_size))
+            self.fading_blueface_2_redhouse.append(ImageStim(self.win, image=self.path_to_stim+f'fading/fading_hr2fb_{self.nr_fading_stimuli-1-i}.bmp', units='deg', size=self.stim_size))
+        
+
+        # test stimuli (used to check if colours are nicely displayed)
         self.test_colours = ImageStim(self.win, image=self.path_to_stim+'test.bmp', units='pix', size=768)
         self.test_house_red = ImageStim(self.win, image=self.path_to_stim+'house_red.bmp', units='deg', size=self.stim_size/2, pos=[-2,-2])
         self.test_house_blue = ImageStim(self.win, image=self.path_to_stim+'house_blue.bmp', units='deg', size=self.stim_size/2, pos=[2,-2])
         self.test_face_red = ImageStim(self.win, image=self.path_to_stim+'face_red.bmp', units='deg', size=self.stim_size/2, pos=[-2,2])
         self.test_face_blue = ImageStim(self.win, image=self.path_to_stim+'face_blue.bmp', units='deg', size=self.stim_size/2, pos=[2,2])
 
-    def draw_stimulus(self):
-        """ This function will be executed from the Trial instance, when the tiral runs. """
-        
-        # TODO:
-        # compute the opacity to let the image fade-in/out
 
-        # I know this is ugly, but I don't know how to make it more beautiful atm..
+
+    def draw_stimulus(self):
+        """ This function will be executed from the Trial instance, when the trial runs. """
+        
+        # the fading index depends on which phase we're in and how many phases there are in total in this trial 
+        fading_index = self.current_trial.phase * self.transition_steps
+        print(self.current_trial.color_comb, self.current_trial.phase, self.current_trial.trial_type, fading_index, self.transition_steps)
+
+        # Ugly, but I don't know how to make it more beautiful atm..
         if self.current_trial.trial_type == 'house_face':
             if self.current_trial.color_comb == 'rivalry_redhouse':
                 self.rivalry_redhouse.draw()
@@ -188,13 +260,22 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         elif self.current_trial.trial_type == 'face':
             if self.current_trial.color_comb == 'redface':
                 self.face_red.draw()
-            else: 
+            elif self.current_trial.color_comb == 'redhouse': 
                 self.face_blue.draw()
+            elif self.current_trial.color_comb == 'fr2hb':
+                self.fading_redface_2_bluehouse[fading_index].draw()
+            elif self.current_trial.color_comb == 'fb2hr':
+                self.fading_blueface_2_redhouse[fading_index].draw()
+            
         elif self.current_trial.trial_type == 'house':
             if self.current_trial.color_comb == 'redface':
                 self.house_blue.draw()
-            else: 
+            elif self.current_trial.color_comb == 'redhouse':
                 self.house_red.draw()
+            elif self.current_trial.color_comb == 'hr2fb':
+                self.fading_redhouse_2_blueface[fading_index].draw()
+            elif self.current_trial.color_comb == 'hb2fr':
+                self.fading_bluehouse_2_redface[fading_index].draw()
         elif self.current_trial.trial_type == 'break':
             self.fixation_screen.draw()
 
@@ -206,13 +287,14 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
             self.calibrate_eyetracker()
             self.start_recording_eyetracker()
         
-        
-        #self.test_colours.draw()
-        self.test_house_red.draw()
-        self.test_house_blue.draw()
-        self.test_face_blue.draw()
-        self.test_face_red.draw()
-        self.display_text(' ', keys='space')
+        if self.draw_test_stimuli:
+            #self.test_colours.draw()
+            self.test_house_red.draw()
+            self.test_house_blue.draw()
+            self.test_face_blue.draw()
+            self.test_face_red.draw()
+            self.display_text(' ', keys='space')
+
         # give some instructions for the participant
         self.display_text('Please fixate the middle of the screen for the entire time\n'
                             'of the experiment.' , keys='space')
@@ -247,20 +329,28 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         0.1s, a random nr between -0.1 and 0.1 is added. 
         """
 
+        if isinstance(self.previous_percept_duration, list):
+            print('Use predefined phase durations')
+            phase_durations = [elem*2 for elem in self.previous_percept_duration]
+            np.random.shuffle(phase_durations)
+
         # while the number is not above the trial duration, generate more trial durations
         max_duration = self.stim_duration_rivalry
+        nr_frames_total = max_duration*self.monitor_refreshrate
+        frames_percept_duration = self.previous_percept_duration*self.monitor_refreshrate
+        jitter_in_frames = int(self.percept_jitter*self.monitor_refreshrate)
         current_duration = 0 
         phase_durations = []
         while True:
-            percept_duration = self.previous_percept_duration + random.uniform(-self.percept_jitter, self.percept_jitter)
+            percept_duration= frames_percept_duration + random.randrange(-jitter_in_frames, jitter_in_frames)
             current_duration = np.array(phase_durations).sum() + percept_duration
-            if current_duration > max_duration:
+            if current_duration > nr_frames_total:
                 break
             
-            phase_durations.append(percept_duration)
+            phase_durations.append(int(percept_duration))
              
         current_duration = np.array(phase_durations).sum()
-        duration_difference = max_duration - current_duration
+        duration_difference = int(nr_frames_total - current_duration)
         # append whats missing to the last trial
         phase_durations.append(duration_difference)
         print("duration unambiguous block:", np.array(phase_durations).sum(), "and length:", len(phase_durations))
@@ -278,7 +368,7 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         data_rivalry = self.global_log.loc[self.global_log['block_type'] == 'rivalry']
         # compute the average duration 
         unique_rivalry_block = data_rivalry['trial_nr'].unique()
-        switch_times = []
+        switch_times = [] 
 
         for rivalry_block in unique_rivalry_block:
             block = data_rivalry.loc[data_rivalry['trial_nr'] == rivalry_block]
@@ -321,10 +411,4 @@ class BinocularRivalrySession(PylinkEyetrackerSession):
         														                     f"Correct responses (within {self.settings['Task settings']['Response interval']}s of physical stimulus change)":self.correct_responses,
                                                                                      "Average percept duration across all rivalry blocks" : self.switch_times_mean,
                                                                                      "Standard deviation percept duration across all rivalry blocks" : self.switch_times_std})
-        
-
-
-            
-            
-
     
