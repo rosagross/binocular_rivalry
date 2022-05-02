@@ -28,8 +28,7 @@ class BRTrial(Trial):
                                      'trial_type': trial_type, 
                                      'trial_nr': trial_nr, 
                                      'color_comb': color_comb,
-                                     'response_hand': response_hand,
-                                     'phase_duration' : phase_duration},
+                                     'response_hand': response_hand},
                          timing = timing,
                          verbose=False, *args, **kwargs)
         
@@ -43,7 +42,7 @@ class BRTrial(Trial):
             
     def draw(self):
         ''' This tells what happens in the trial, and this is defined in the session itself. '''
-        self.session.draw_stimulus()
+        self.session.draw_stimulus(self.phase)
 
 
     def get_events(self):
@@ -90,6 +89,7 @@ class BRTrial(Trial):
                 self.session.global_log.loc[idx, 'key_duration'] = thisKey.duration
                 self.session.global_log.loc[idx, 'phase'] = self.phase
                 self.session.global_log.loc[idx, 'response'] = thisKey.name
+                self.session.global_log.loc[idx, 'response_button'] = self.session.response_button
                 self.session.global_log.loc[idx, 'nr_frames'] = 0
 
                 for param, val in self.parameters.items():
@@ -98,6 +98,13 @@ class BRTrial(Trial):
                 if self.eyetracker_on:  # send message to eyetracker
                     msg = f'start_type-{event_type}_trial-{self.trial_nr}_phase-{self.phase}_key-{thisKey.name}_time-{t}_duration-{thisKey.duration}'
                     self.session.tracker.sendMessage(msg)
+
+                if thisKey.name == 'p':
+                    input('PAUSE. Press enter to continue.')
+
+                if thisKey.name in self.session.break_buttons:
+                    print('NEXT PHASE')
+                    self.exit_phase = True
 
         
                     
